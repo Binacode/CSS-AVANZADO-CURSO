@@ -1,0 +1,84 @@
+/* 
+flex-grow
+flex-shrink
+flex-basis
+
+align-self
+order
+*/
+
+.container{
+  display: flex;
+  width: 500px;
+  background: lime;
+  height: 400px;
+  /* flex-direction: column; */
+}
+
+.item {
+  background: yellow;
+  /*
+  width: 80px;
+  flex-shrink: 1;*/
+  /* flex: 5;   */
+  /* flex-basis: auto;
+  flex-grow: 1; 
+  */
+  /* flex: grow shrink basis; */
+  /* background: lime; */
+  flex: 5;
+  height: 40px;
+  /* width: 400px; */
+  /* transition: all .5s; */
+
+}
+
+/* .item:hover{
+  flex-grow: 10;
+  background: steelblue;
+} */
+
+.item:nth-child(even){
+  background: pink;
+}
+
+.item:nth-child(2){
+  /* align-self: flex-end; */
+  /* align-self: center; */
+   /* order: 1;  */
+  order: 1;
+  } 
+/* .item:nth-child(even):hover{
+  background: slateblue;
+} */
+
+/* .item:nth-child(5){
+  flex-shrink: 2;
+} */
+
+.content{
+  display: flex;
+  /* height: 500px; */
+}
+
+.main{
+  background: pink;
+  width: 75%;
+}
+
+.aside{
+  background: tomato;
+  width: 25%;
+}
+
+@media screen and (max-width: 640px){
+  .content{
+    flex-direction: column;
+  }
+  .main, .aside{
+    width: 100%;
+  }
+  .aside{
+    order: -1;
+  }
+}
